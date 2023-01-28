@@ -1,2 +1,5 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<div class="container mx-auto my-0 pt-8 text-center">
+	<h1 class="pt-1 text-4xl">Hi!</h1>
+	<h3 class="pt-1 text-2xl">I'm Nicolae Grosu</h3>
+	<p class="pt-1 text-xl">This is my future portofolio website</p>
+</div>
