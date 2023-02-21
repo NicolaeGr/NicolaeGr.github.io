@@ -110,7 +110,9 @@
 			/> -->
 		</div>
 		<div class="flex flex-col items-center justify-center gap-12 text-white">
-			<h2 class="max-w-screen-xl text-center text-2xl font-bold sm:text-3xl xl:text-4xl">
+			<h2
+				class="max-w-screen-xl text-center font-['Space_Grotesk'] text-2xl font-bold sm:text-3xl xl:text-4xl"
+			>
 				About Me
 			</h2>
 			<p class="text-center font-['Inter'] font-normal text-white">
@@ -124,14 +126,20 @@
 				class="mx-8 grid auto-cols-max grid-cols-1 place-content-evenly gap-8 sm:mx-16 sm:grid-cols-2"
 			>
 				<article class="rounded-2xl border-2 border-[#808080] bg-white p-4">
-					<h3 class="my-6 text-center text-2xl font-bold text-main-purple xl:text-4xl">CLASSIC</h3>
+					<h3
+						class="my-6 text-center font-['Space_Grotesk'] text-2xl font-bold text-main-purple xl:text-4xl"
+					>
+						CLASSIC
+					</h3>
 					<p class="mb-8 text-center font-['Inter'] font-normal text-black">
 						Modern yet classic backend written in Node.JS using Express or Nest.JS with a variety of
 						SQL and NOSQL databases.
 					</p>
 				</article>
 				<article class="rounded-2xl border-2 border-[#808080] bg-white p-4">
-					<h3 class="my-6 text-center text-2xl font-bold text-main-purple xl:text-4xl">
+					<h3
+						class="my-6 text-center font-['Space_Grotesk'] text-2xl font-bold text-main-purple xl:text-4xl"
+					>
 						PocketBase
 					</h3>
 					<p class="mb-8 text-center font-['Inter'] font-normal text-black">
