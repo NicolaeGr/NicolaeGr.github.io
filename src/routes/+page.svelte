@@ -117,7 +117,7 @@
 				I'm a full stack web developer with expertise in Angular, Svelte, and native technologies
 				for front-end development, and Node.js for back-end development. I have experience in
 				building dynamic and responsive web applications using these technologies, and I'm adaptable
-				and able to learn new technologies quickly. Here are the back-ends i can create alongside
+				and able to learn new technologies quickly. Here are the back-ends I can create alongside
 				the front-end application.
 			</p>
 			<div
