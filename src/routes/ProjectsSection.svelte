@@ -3,39 +3,18 @@
 
 	let projects = [
 		{
-			name: 'Room Homepage',
-			description: 'A short description of the project',
+			name: 'QR Component',
+			description: 'Proof that I can center a div elemement',
 			url: 'https://room.nicolaegrosu.me',
 			source: 'https://github.com/nicolaegr',
-			screenshot: 'images/projects/The Image.png'
+			screenshot: 'images/projects/Qr Component.png'
 		},
 		{
-			name: 'Room Homepage',
-			description: 'A short description of the project',
-			url: 'https://room.nicolaegrosu.me',
-			source: 'https://github.com/nicolaegr',
-			screenshot: 'images/projects/The Image.png'
-		},
-		{
-			name: 'Room Homepage',
-			description: 'A short description of the project',
-			url: 'https://room.nicolaegrosu.me',
-			source: 'https://github.com/nicolaegr',
-			screenshot: 'images/projects/The Image.png'
-		},
-		{
-			name: 'Room Homepage',
-			description: 'A short description of the project',
-			url: 'https://room.nicolaegrosu.me',
-			source: 'https://github.com/nicolaegr',
-			screenshot: 'images/projects/The Image.png'
-		},
-		{
-			name: 'Room Homepage',
-			description: 'A short description of the project',
-			url: 'https://room.nicolaegrosu.me',
-			source: 'https://github.com/nicolaegr',
-			screenshot: 'images/projects/The Image.png'
+			name: 'Multi Step Form',
+			description: 'A single page multi-step form written in pure HTML, CSS and JS',
+			url: 'https://multi-step-form.nicolaegrosu.me',
+			source: 'https://github.com/NicolaeGr/multi-step-form',
+			screenshot: 'images/projects/Mult Step Form.webp'
 		},
 		{
 			name: 'Room Homepage',
