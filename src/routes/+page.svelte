@@ -1,27 +1,14 @@
-<svelte:head>
-	<title>Grosu Nicolae</title>
-	<meta name="description" content="Freelance Web Developer from Moldova" />
-</svelte:head>
+<script>
+	import AboutMeSection from './AboutMeSection.svelte';
+	import ContactMeSection from './ContactMeSection.svelte';
+	import HeroSection from './HeroSection.svelte';
+	import ProjectsSection from './ProjectsSection.svelte';
+</script>
 
-<header class="h-16 w-screen">
-	<div class="container m-auto grid h-full w-full grid-cols-6 grid-rows-1">
-		<div class="col-span-1 mx-16 my-auto hidden md:inline">GN</div>
-		<div class="col-span-4 flex items-center justify-center gap-8">
-			<a href="#about">About Me</a>
+<HeroSection />
 
-			<a href="#projects">My Projects</a>
+<AboutMeSection />
 
-			<a href="#reviews">Reviews</a>
-		</div>
-		<div class="col-span-1" />
-	</div>
-</header>
+<ProjectsSection />
 
-<section id="hero" />
-
-<section id="about" />
-
-<section id="projects" />
-
-<section id="reviews" />
-<footer />
+<ContactMeSection />

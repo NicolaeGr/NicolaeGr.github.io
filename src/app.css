@@ -1,3 +1,147 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Inter;
+
+	background-color: #f8f8f8;
+}
+
+div {
+	display: flex;
+	flex-wrap: nowrap;
+
+	padding: 0;
+
+	min-height: 32px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Space Grotesk', sans-serif;
+	font-weight: 700;
+}
+
+.container {
+	margin: 0 auto;
+	position: relative;
+
+	width: 90vw;
+	max-width: 1150px;
+	height: 100%;
+}
+
+h2 {
+	font-size: 52px;
+	font-weight: 600;
+	line-height: 104%;
+	font-style: normal;
+	text-align: center;
+
+	margin: 0px;
+	padding: 0px;
+	padding-top: 80px;
+
+	width: 100%;
+}
+
+@media (max-width: 992px) {
+	body {
+		font-size: 14px;
+	}
+
+	h2 {
+		font-size: 32px;
+	}
+}
+
+@media (max-width: 480px) {
+	body {
+		font-size: 13px;
+	}
+}
+
+@keyframes shake {
+	10%,
+	90% {
+		transform: translateX(-5px);
+	}
+
+	20%,
+	80% {
+		transform: translateX(5px);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translateX(-10px);
+	}
+
+	40%,
+	60% {
+		transform: translateX(10px);
+	}
+}
+
+@keyframes flash {
+	0%,
+	99% {
+		border-color: red;
+	}
+
+	50% {
+		border-color: transparent;
+	}
+
+	100% {
+		border-color: #edebf4;
+	}
+	10%,
+	90% {
+		transform: translateX(-1px);
+	}
+
+	20%,
+	80% {
+		transform: translateX(1px);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translateX(-2px);
+	}
+
+	40%,
+	60% {
+		transform: translateX(2px);
+	}
+}
+
+.shake {
+	animation: shake 0.5s;
+	animation-delay: 0.5s;
+}
+
+.flash {
+	animation: flash 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.invalid:focus,
+.invalid:active,
+.input-email.invalid {
+	border: 1px solid red !important;
+}

@@ -8,7 +8,9 @@ module.exports = {
 			'main-dark': '#000000',
 			'secundary-dark': '#080D1D',
 			'text-gray-1': '#414141',
-			'text-gray-2': '#767676'
+			'text-gray-2': '#767676',
+			white: '#ffffff',
+			black: '#000000'
 		}
 	},
 	plugins: []
