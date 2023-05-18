@@ -17,8 +17,15 @@
 			screenshot: 'images/projects/Mult Step Form.webp'
 		},
 		{
+			name: 'Link Shortenrr',
+			description: 'A website that can shorten your links using the shrtco.de API',
+			url: 'https://shortly.nicolaegrosu.me/',
+			source: 'https://github.com/NicolaeGr/shortly',
+			screenshot: 'images/projects/Link Shortener.png'
+		},
+		{
 			name: 'Room Homepage',
-			description: 'A short description of the project',
+			description: 'A resposive design website using flexbox',
 			url: 'https://room.nicolaegrosu.me',
 			source: 'https://github.com/nicolaegr',
 			screenshot: 'images/projects/The Image.png'
