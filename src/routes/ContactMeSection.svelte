@@ -6,6 +6,11 @@
 	let emailInput: HTMLInputElement | null = null;
 	let messageInput: HTMLTextAreaElement | null = null;
 
+	let submitButton: HTMLButtonElement;
+	let toast: HTMLDivElement;
+	let closeIcon: HTMLElement;
+	let progress: HTMLDivElement;
+
 	async function sendData(event: SubmitEvent) {
 		if (!form) return;
 		if (!validateForm()) return;
@@ -13,6 +18,31 @@
 
 		try {
 			await axios.post('/contact-form', formData);
+
+			let timer1: NodeJS.Timeout, timer2: NodeJS.Timeout;
+
+			toast.classList.add('active');
+			progress.classList.add('active');
+
+			timer1 = setTimeout(() => {
+				toast.classList.remove('active');
+			}, 5000);
+
+			timer2 = setTimeout(() => {
+				progress.classList.remove('active');
+			}, 5300);
+
+			closeIcon.addEventListener('click', () => {
+				toast.classList.remove('active');
+
+				setTimeout(() => {
+					progress.classList.remove('active');
+				}, 300);
+
+				clearTimeout(timer1);
+				clearTimeout(timer2);
+			});
+
 			form.reset();
 		} catch (error) {
 			console.error('Error:', error);
@@ -102,7 +132,7 @@
 				id=""
 				placeholder="Message"
 			/>
-			<button type="submit">Submit</button>
+			<button bind:this={submitButton} type="submit">Submit</button>
 		</form>
 		<div class="image">
 			<img src="images/contact-me.svg" alt="" />
@@ -143,6 +173,27 @@
 		</div>
 	</div>
 </section>
+
+<svelte:head>
+	<script src="https://kit.fontawesome.com/9ff62d03ae.js" crossorigin="anonymous"></script>
+</svelte:head>
+
+<div hidden class="toast active" />
+<div bind:this={toast} class="toast">
+	<div class="toast-content">
+		<i class="fas fa-solid fa-check check" />
+
+		<div class="message">
+			<span class="text text-1">Success</span>
+			<span class="text text-2">Your changes has been saved</span>
+		</div>
+	</div>
+	<i bind:this={closeIcon} class="fa-solid fa-xmark close" />
+
+	<!-- Remove 'active' class, this is just to show in Codepen thumbnail -->
+	<div bind:this={progress} class="progress" />
+	<div hidden class="progress active" />
+</div>
 
 <style>
 	#contact-me {
@@ -299,6 +350,101 @@
 
 		.socials {
 			grid-area: 2 / 1 / 4 / 2;
+		}
+	}
+
+	.toast {
+		position: fixed;
+		top: 25px;
+		right: 30px;
+		border-radius: 12px;
+		background: #fff;
+		padding: 20px 35px 20px 25px;
+		box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.1);
+		overflow: hidden;
+		transform: translateX(calc(100% + 30px));
+		transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+
+		z-index: 10000;
+	}
+
+	.toast.active {
+		transform: translateX(0%);
+	}
+
+	.toast .toast-content {
+		display: flex;
+		align-items: center;
+	}
+
+	.toast-content .check {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 35px;
+		min-width: 35px;
+		background-color: #4070f4;
+		color: #fff;
+		font-size: 20px;
+		border-radius: 50%;
+	}
+
+	.toast-content .message {
+		display: flex;
+		flex-direction: column;
+		margin: 0 20px;
+	}
+
+	.message .text {
+		font-size: 16px;
+		font-weight: 400;
+		color: #666666;
+	}
+
+	.message .text.text-1 {
+		font-weight: 600;
+		color: #333;
+	}
+
+	.toast .close {
+		position: absolute;
+		top: 10px;
+		right: 15px;
+		padding: 5px;
+		cursor: pointer;
+		opacity: 0.7;
+	}
+
+	.toast .close:hover {
+		opacity: 1;
+	}
+
+	.toast .progress {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 3px;
+		min-height: 1px;
+		width: 100%;
+	}
+
+	.toast .progress:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		background-color: #4070f4;
+	}
+
+	.progress.active:before {
+		animation: progress 5s linear forwards;
+	}
+
+	@keyframes progress {
+		100% {
+			right: 100%;
 		}
 	}
 </style>
