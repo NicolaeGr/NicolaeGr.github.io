@@ -14,7 +14,7 @@
 	const typedOptions = {
 		strings: [
 			'Full-stack developer with a strong foundation in web development and a passion for solving complex problems.',
-			'Full Stack Web Developer with over 2 years of experience working remote.'
+			'Full Stack Web Developer with almost 3 years of experience working remote.'
 		],
 		typeSpeed: 40,
 		backDelay: 4000,
