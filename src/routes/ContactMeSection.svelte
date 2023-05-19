@@ -174,10 +174,6 @@
 	</div>
 </section>
 
-<svelte:head>
-	<script src="https://kit.fontawesome.com/9ff62d03ae.js" crossorigin="anonymous"></script>
-</svelte:head>
-
 <div hidden class="toast active" />
 <div bind:this={toast} class="toast">
 	<div class="toast-content">
