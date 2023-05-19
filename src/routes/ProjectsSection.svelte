@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ComingSoonCard from './ComingSoonCard.svelte';
 	import ProjectCard from './ProjectCard.svelte';
 
 	let projects = [
@@ -61,6 +62,7 @@
 			{#each projects as project}
 				<ProjectCard {project} />
 			{/each}
+			<ComingSoonCard />
 		</div>
 	</div>
 </section>
