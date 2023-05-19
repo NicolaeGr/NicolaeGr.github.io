@@ -10,9 +10,7 @@
 
 <div
 	class="projects-card"
-	style="background-image: url('images/bgs/blob-scene-haikei{Math.floor(
-		Math.random() * 3 + 1
-	)}.svg');"
+	style="background-image: url('images/bgs/blob-scene{Math.floor(Math.random() * 3 + 1)}.svg');"
 >
 	<div class="img-container">
 		<img src={project.screenshot} alt="" />
