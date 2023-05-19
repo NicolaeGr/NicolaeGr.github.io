@@ -181,7 +181,7 @@
 
 		<div class="message">
 			<span class="text text-1">Success</span>
-			<span class="text text-2">Your changes has been saved</span>
+			<span class="text text-2">Your message has been sent!</span>
 		</div>
 	</div>
 	<i bind:this={closeIcon} class="fa-solid fa-xmark close" />
