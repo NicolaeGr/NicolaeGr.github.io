@@ -57,7 +57,7 @@
 			<h1>Hi,<br />I am <strong>Nicolae Grosu</strong></h1>
 			<div class="typed-wrapper">
 				<span bind:this={typedElement}>
-					Full Stack Web Developer with over 2 years of experience working remote.
+					Full Stack Web Developer with almost 3 years of experience working remote.
 				</span>
 			</div>
 			<div class="btn-wrapper">
