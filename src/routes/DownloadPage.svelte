@@ -29,8 +29,8 @@
 
 	function download(): void {
 		const link: HTMLAnchorElement = document.createElement('a');
-		link.href = 'Resume_Grosu_Nicolae.pdf';
-		link.download = 'Resume_Grosu_Nicolae.pdf';
+		link.href = 'Grosu_Nicolae_Resume.pdf';
+		link.download = 'Grosu_Nicolae_Resume.pdf';
 
 		link.click();
 
@@ -43,7 +43,7 @@
 		<div class="paper">
 			<img
 				style="transform: scale({zoomLevel});"
-				src="images/Resume_Grosu_Nicolae.jpg"
+				src="images/Grosu_Nicolae_Resume.jpg"
 				alt="Resume"
 			/>
 		</div>
